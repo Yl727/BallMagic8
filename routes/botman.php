@@ -47,7 +47,7 @@ $botman->hears('Ayuda', function ($bot) {
 /**
  * 
  */
-$botman->hears('{pregunta}', function ($bot,$pregunta) {
+$botman->hears('\¿{pregunta}\?', function ($bot,$pregunta) {
     
     $array=getArray();
     $respuesta=rand(0,20);
@@ -55,5 +55,5 @@ $botman->hears('{pregunta}', function ($bot,$pregunta) {
 });
 $botman->hears('Start conversation', BotManController::class.'@startConversation');
 $botman->fallback( function ($bot) {
-    $bot->reply('Que quieres hacer escribe una pregunta');
+    $bot->reply('Que pregunta quieres hacer escribela');
 });
