@@ -47,6 +47,10 @@ $botman->hears('Ayuda', function ($bot) {
 /**
  * 
  */
+
+$botman->hears('Prueba', function ($bot) {
+    $bot->reply('recuerda las preguntas siempre termininan con el simbolo ?');
+});
 $botman->hears('\¿{pregunta}\?', function ($bot,$pregunta) {
     
     $array=getArray();
